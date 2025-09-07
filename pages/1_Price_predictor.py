@@ -58,7 +58,8 @@ if st.button('Predict'):
     high = base_price + 0.22
 
     #display
-    st.text("The price of flat is between {} and {}".format(round(low,2), round(high,2)))
+    st.text("The price of flat is between {} and {} cr".format(round(low,2), round(high,2)))
+
 
 
 
