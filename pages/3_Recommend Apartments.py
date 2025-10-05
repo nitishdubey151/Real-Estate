@@ -8,7 +8,6 @@ st.set_page_config(page_title="Recommend Apartments")
 
 location_df = pickle.load(open('datasets/location_distance.pkl','rb'))
 
-st.dataframe(location_df)
 
 cosine_sim1 = pickle.load(open('datasets/cosine_sim1.pkl','rb'))
 cosine_sim2 = pickle.load(open('datasets/cosine_sim2.pkl','rb'))
@@ -61,3 +60,4 @@ if st.button('Recommend'):
     recommendations_df = recommend_properties_with_scores(selected_appartment)
 
     st.dataframe(recommendations_df)
+
