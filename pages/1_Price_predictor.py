@@ -12,7 +12,6 @@ with open('df.pkl', 'rb') as file:
 with open('pipeline.pkl', 'rb') as file:
     pipeline = pickle.load(file)
 
-st.dataframe(df)
 
 st.header('Enter your inputs')
 
@@ -59,6 +58,7 @@ if st.button('Predict'):
 
     #display
     st.text("The price of flat is between {} and {} cr".format(round(low,2), round(high,2)))
+
 
 
 
