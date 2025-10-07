@@ -21,7 +21,6 @@ fig = px.scatter_mapbox(group_df, lat="latitude", lon="longitude", color="price_
                   color_continuous_scale=px.colors.cyclical.IceFire, zoom=10,
                   mapbox_style="open-street-map",width=1200,height=700,hover_name=group_df.index)
 st.plotly_chart(fig,use_container_width=True)
-st.dataframe(new_df)
 
 st.header('Features Wordcloud')
 wordcloud = WordCloud(width = 800, height = 800,
@@ -71,3 +70,4 @@ st.header('Side by side Distplot for property_type')
 fig3 = plt.figure(figsize = (10,4))
 fig3 = sns.displot(new_df[new_df['property_type']=='house']['price'])
 st.pyplot(fig3)
+
